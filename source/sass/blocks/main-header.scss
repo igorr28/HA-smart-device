@@ -1,0 +1,60 @@
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 30px;
+  padding-bottom: 35px;
+  color: $color-alice-blue-text;
+  background-image: linear-gradient(180deg, $color-black-pearl 84.9%, rgba($color-black-pearl, 0) 100%);
+
+  @include vp-1023 {
+    position: static;
+    padding-top: 20px;
+    padding-bottom: 25px;
+  }
+
+  @include vp-767 {
+    padding-top: 15px;
+    padding-bottom: 20px;
+  }
+}
+
+.main-header__logo {
+  @include vp-1023 {
+    margin-right: 30px;
+  }
+}
+
+.main-header__container {
+  display: flex;
+  align-items: center;
+}
+
+.main-header__contacts {
+  margin-left: calc(160 / 1220) *100%;
+  flex-grow: 1;
+
+  @include vp-1279 {
+    margin-left: calc(50 / 1220) *100%;
+  }
+
+  @include vp-1023 {
+    margin-right: calc(20 / 770) *100%;
+    margin-left: auto;
+  }
+
+  @include vp-767 {
+    margin-right: calc(10 / 770) *100%;
+  }
+}
+
+.main-header__btn {
+  margin-left: auto;
+  margin-right: calc(60 / 1220) *100%;
+  flex-shrink: 0;
+
+  @include vp-1023 {
+    display: none;
+  }
+}
