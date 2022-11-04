@@ -1,4 +1,5 @@
 .btn {
+  min-width: 100px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -23,6 +24,23 @@
     &:hover {
       border-color: $color-deep-sky-blue;
       color: $color-deep-sky-blue;
+    }
+  }
+
+  &--secondary {
+    max-width: 410px;
+    padding: 15px 25px;
+    font-size: 18px;
+    line-height: 1.16;
+    background-color: $color-deep-sky-blue;
+
+    @include vp-767 {
+      font-size: 14px;
+    }
+
+    &:hover {
+      color: $color-deep-sky-blue;
+      background-color: $color-default-white;
     }
   }
 

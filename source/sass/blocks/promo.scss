@@ -1,0 +1,96 @@
+.promo {
+  padding: 305px calc(125 / 1220) *100% 280px calc(125 / 1220) *100%;
+  background-color: $color-black-pearl;
+  background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/main-bg.jpg");
+  background-size: auto, cover;
+  background-repeat: no-repeat, no-repeat;
+  color: $color-alice-blue-text;
+
+  @media (min-width: (768px)) {
+    @include retina {
+      background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/main-bg@2x.jpg");
+    }
+  }
+
+  @include vp-1023 {
+    padding: 180px 0 205px 0;
+  }
+
+  @include vp-767 {
+    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/main-bg-tablet.jpg");
+
+    @include retina {
+      background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/main-bg-tablet@2x.jpg");
+    }
+  }
+
+  @include vp-320 {
+    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/main-bg-mobile.jpg");
+
+    @include retina {
+      background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/main-bg-mobile@2x.jpg");
+    }
+  }
+}
+
+.promo h2 {
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-family: $ff-condensed;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 1.18;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+
+  @include vp-1023 {
+    font-size: 64px;
+    margin-bottom: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 36px;
+  }
+}
+
+.promo p {
+  width: calc(685 / 1220) *100%;
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-size: 22px;
+  line-height: 1.55;
+
+  @include vp-1023 {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+  }
+}
+
+.promo__link {
+  @include vp-1023 {
+    margin-left: 45px;
+  }
+
+  @include vp-767 {
+    width: 270px;
+    margin-left: 0;
+  }
+}
+
+.promo__link-text {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.promo__link-text-mobile {
+  display: none;
+
+  @include vp-767 {
+    display: inline-block;
+  }
+}
