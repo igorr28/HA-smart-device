@@ -1635,7 +1635,7 @@ button,
     margin-bottom: 0;
   }
 
-  .main-footer__socials:after {
+  .main-footer__socials::after {
     position: absolute;
     top: 100%;
     content: "";
@@ -1657,7 +1657,7 @@ button,
     padding-top: 20px;
   }
 
-  .main-footer__sections:after {
+  .main-footer__sections::after {
     position: absolute;
     top: 100%;
     left: -6.4935064935%;
@@ -1670,13 +1670,12 @@ button,
 
   .main-footer__contacts {
     position: relative;
-    position: relative;
     width: 100%;
     padding-bottom: 20px;
     padding-top: 20px;
   }
 
-  .main-footer__contacts:after {
+  .main-footer__contacts::after {
     position: absolute;
     top: 100%;
     left: -6.4935064935%;
@@ -1697,13 +1696,16 @@ button,
     margin-bottom: 15px;
   }
 
-  .accordion__content--close {
-    height: 0;
+  .accordion__content {
     overflow: hidden;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
   }
 
   .accordion__btn {
     position: relative;
+    cursor: pointer;
   }
 
   .accordion__btn::after,
@@ -1718,7 +1720,11 @@ button,
     background: #c4c4c4;
   }
 
-  .accordion__btn::after {
+  .accordion__btn--close {
+    margin-bottom: 0;
+  }
+
+  .accordion__btn--close::after {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);

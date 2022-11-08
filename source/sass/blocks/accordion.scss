@@ -1,13 +1,14 @@
-.accordion__content--close {
+.accordion__content {
   @include vp-767 {
-    height: 0;
     overflow: hidden;
+    transition: $trans-default;
   }
 }
 
 .accordion__btn {
   @include vp-767 {
     position: relative;
+    cursor: pointer;
   }
 
   &::after,
@@ -24,7 +25,13 @@
     }
   }
 
-  &::after {
+  &--close {
+    @include vp-767 {
+      margin-bottom: 0;
+    }
+  }
+
+  &--close::after {
     @include vp-767 {
       transform: rotate(90deg);
     }
