@@ -16,13 +16,13 @@
     <div class="wrapper">
 
       <!-- Header -->
-      <header class="main-header">
+      <header class="main-header header">
         <div class="container main-header__container">
-          <a class="logo main-header__logo" href="#">
-            <svg class="logo__img"  width="55" height="55" aria-hidden="true" focusable="false">
+          <a class="logo main-header__logo">
+            <svg class="logo__img logo__img--header"  width="55" height="55" aria-hidden="true" focusable="false">
               <use xlink:href="img/sprite_auto.svg#logo-img"></use>
             </svg>
-            <div class="logo__text">
+            <div class="logo__text logo__text--header">
               <svg class="logo__title"  width="133" height="20" aria-hidden="true" focusable="false">
                 <use xlink:href="img/sprite_auto.svg#logo-title"></use>
               </svg>
@@ -149,9 +149,9 @@
           </div>
         </section>
       </main> -->
-      <footer class="main-footer">
+      <footer class="main-footer footer accordion">
         <div class="container main-footer__container">
-          <section class="main-footer__social">
+          <section class="main-footer__socials">
             <a class="logo main-footer__logo">
               <svg class="logo__img"  width="55" height="55" aria-hidden="true" focusable="false">
                 <use xlink:href="img/sprite_auto.svg#logo-img"></use>
@@ -170,29 +170,71 @@
             <ul class="socials main-footer__socials-list">
               <li class="socials__item">
                 <a class="socials__link" href="#">
-                  <svg class="socials__link-img"  width="20" height="20">
-                    <use xlink:href="img/sprite.svg#vk"></use>
+                  <svg class="socials__link-img"  width="30" height="30" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite_auto.svg#vk"></use>
                   </svg>
                   <span class="visually-hidden">Вконтакте.</span>
                 </a>
               </li>
               <li class="socials__item">
                 <a class="socials__link" href="#">
-                  <svg class="socials__link-img"  width="22" height="22">
-                    <use xlink:href="img/sprite.svg#pinterest"></use>
+                  <svg class="socials__link-img"  width="30" height="30" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite_auto.svg#pinterest"></use>
                   </svg>
-                  <span class="visually-hidden">Телеграмм.</span>
+                  <span class="visually-hidden">Пинтерест.</span>
                 </a>
               </li>
               <li class="socials__item">
                 <a class="socials__link" href="#">
-                  <svg class="socials__link-img"  width="20" height="20">
-                    <use xlink:href="img/sprite.svg#ok"></use>
+                  <svg class="socials__link-img"  width="30" height="30" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite_auto.svg#ok"></use>
                   </svg>
                   <span class="visually-hidden">Одноклассники.</span>
                 </a>
               </li>
             </ul>
+          </section>
+          <section class="main-footer__sections sections">
+            <h3 class="sections__title accordion__btn accordion__btn--close">Разделы сайта</h3>
+            <div class="sections__wrap accordion__content accordion__content--close">
+              <ul class="sections__list">
+                <li class="sections__item">
+                  <a class="sections__link" href="#">О Компании</a>
+                </li>
+                <li class="sections__item">
+                  <a class="sections__link" href="#">Продукты</a>
+                </li>
+                <li class="sections__item">
+                  <a class="sections__link" href="#">Производство печатных плат</a>
+                </li>
+                <li class="sections__item">
+                  <a class="sections__link" href="#">Монтаж печатных плат</a>
+                </li>
+              </ul>
+              <ul class="sections__list">
+                <li class="sections__item">
+                  <a class="sections__link" href="#">Комплектующие</a>
+                </li>
+                <li class="sections__item">
+                  <a class="sections__link" href="#">Доставка</a>
+                </li>
+                <li class="sections__item">
+                  <a class="sections__link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <div class="main-footer__contacts">
+            <h3 class="main-footer__contacts-title accordion__btn accordion__btn--close">Наш офис</h3>
+            <div class="main-footer__contacts-wrap accordion__content accordion__content--close">
+              <address class="main-footer__contacts-address">г. Мытищи, Олимпийский проспект, д.10</address>
+              <ul class="main-footer__contacts-tels">
+                <li class="main-footer__contacts-tel">+7 (495) 589-40-50</li>
+                <li class="main-footer__contacts-tel">+7 (925) 389-58-29</li>
+                <li class="main-footer__contacts-tel">+7 (925) 364-78-13</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </footer>
 

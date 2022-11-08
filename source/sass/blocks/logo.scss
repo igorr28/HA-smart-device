@@ -21,10 +21,12 @@
   margin-right: 10px;
   fill: $color-deep-sky-blue;
 
-  @include vp-767 {
-    width: 35px;
-    height: 35px;
-    margin-right: 0;
+  &--header {
+    @include vp-767 {
+      width: 35px;
+      height: 35px;
+      margin-right: 0;
+    }
   }
 }
 
@@ -32,8 +34,10 @@
   display: flex;
   flex-direction: column;
 
-  @include vp-767 {
-    display: none;
+  &--header {
+    @include vp-767 {
+      display: none;
+    }
   }
 }
 
