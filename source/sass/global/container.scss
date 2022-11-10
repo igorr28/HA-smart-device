@@ -4,7 +4,7 @@
   padding: 0 110px;
 
   @include vp-1439 {
-    padding: 0 calc(40 / 1440) *100%;
+    padding: 0 calc(50 / 1420) *100%;
   }
 
   @include vp-1023 {
@@ -13,7 +13,7 @@
   }
 
   @include vp-320 {
-    width: 270px;
+    width: 320px;
     padding: 0 25px;
   }
 }

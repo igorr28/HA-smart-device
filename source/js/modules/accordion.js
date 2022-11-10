@@ -1,16 +1,8 @@
 const accordion = document.querySelector('.accordion');
-const accordionContents = document.querySelectorAll('.accordion__content');
-const accordionButtons = document.querySelectorAll('.accordion__btn');
+let accordionButtons;
+let accordionContents;
 
-
-for (let accordionContent of accordionContents) {
-  accordionContent.style.height = '0px';
-}
-for (let accordionButton of accordionButtons) {
-  accordionButton.classList.add('accordion__btn--close');
-}
-
-accordion.addEventListener('click', (e) => {
+const accordionHandler = (e) => {
   const target = e.target;
   if (target.classList.contains('accordion__btn')) {
     accordionButtons = document.querySelectorAll('.accordion__btn');
@@ -29,4 +21,34 @@ accordion.addEventListener('click', (e) => {
       }
     }
   }
-});
+};
+
+const breakpoint = window.matchMedia('(max-width: 768px)');
+const breakpointChecker = () => {
+  if (breakpoint.matches) {
+    accordionContents = document.querySelectorAll('.accordion__content');
+    accordionButtons = document.querySelectorAll('.accordion__btn');
+
+    for (let accordionContent of accordionContents) {
+      accordionContent.style.height = '0px';
+    }
+    for (let accordionButton of accordionButtons) {
+      accordionButton.classList.add('accordion__btn--close');
+    }
+    accordion.addEventListener('click', accordionHandler);
+  } else {
+    accordionContents = document.querySelectorAll('.accordion__content');
+    accordionButtons = document.querySelectorAll('.accordion__btn');
+
+    for (let accordionContent of accordionContents) {
+      accordionContent.style.height = '';
+    }
+    for (let accordionButton of accordionButtons) {
+      accordionButton.classList.remove('accordion__btn--close');
+    }
+
+    accordion.removeEventListener('click', accordionHandler);
+  }
+};
+breakpoint.addListener(breakpointChecker);
+breakpointChecker();

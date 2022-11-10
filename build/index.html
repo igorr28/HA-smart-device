@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="Описание проекта">
     <title>Smart Device</title>
     <link rel="preload" href="fonts/robotocondensed.woff2" type="font/woff2" as="font" crossorigin="anonymous">
@@ -62,7 +62,7 @@
           <div class="container">
             <h2>Печатные платы</h2>
             <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-            <a class="btn btn--secondary promo__link" href="#">
+            <a class="btn btn--secondary promo__link" href="#order">
               <span class="promo__link-text">Получить бесплатную консультацию</span>
               <span class="promo__link-text-mobile">бесплатная консультация</span>
             </a>
@@ -71,7 +71,7 @@
 
         <!-- Advantages -->
         <section class="advantages">
-          <h1 class="visually-hidden">Наши преимущества.</h1>
+          <h2 class="visually-hidden">Наши преимущества.</h2>
           <div class="container">
             <ul class="advantages__list">
               <li class="advantages__item">
@@ -139,6 +139,86 @@
           </div>
         </section>
 
+        <!-- Services -->
+        <section class="services" id="order">
+          <div class="container">
+            <h2>
+              <span class="services__title">Smart&nbsp;Device предлагает следующие товары и услуги</span>
+              <span class="services__title services__title--mobile">Товары и услуги Smart&nbsp;Device</span>
+            </h2>
+            <ul class="services__list">
+              <li class="services__item">
+                <a href="" class="services__link">
+                  <article class="service">
+                    <h3>Производство печатных плат</h3>
+                    <picture>
+                      <!-- <source type="image/webp" media="(max-width: 320px)" srcset="img/services-1m.webp 1x, img/services-1m@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1024px)" srcset="img/services-1t.webp 1x, img/services-1t@2x.webp 2x">
+                      <source type="image/webp" srcset="img/services-1.webp 1x, img/services-1@2x.webp 2x"> -->
+
+                      <source media="(max-width: 320px)" srcset="img/services-1m.jpg 1x, img/services-1m@2x.jpg 2x">
+                      <source media="(max-width: 1024px)" srcset="img/services-1t.jpg 1x, img/services-1t@2x.jpg 2x">
+                      <img src="./img/services-1.jpg" srcset="./img/services-1@2x.jpg 2x" alt="Фото печатной платы" class="service__img">
+                    </picture>
+                    <div class="service__btn">
+                      <svg class="service__icon" width="5" height="10" aria-hidden="true" focusable="false">
+                        <use xlink:href="img/sprite_auto.svg#services-arrow"></use>
+                      </svg>
+                      <span class="visually-hidden">Переход на страницу производства печатных плат.</span>
+                    </div>
+                  </article>
+                </a>
+              </li>
+              <li class="services__item">
+                <a href="" class="services__link">
+                  <article class="service">
+                    <h3>Монтаж печатных плат</h3>
+                    <picture>
+                      <!-- <source type="image/webp" media="(max-width: 320px)" srcset="img/services-2m.webp 1x, img/services-2m@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1024px)" srcset="img/services-2t.webp 1x, img/services-2t@2x.webp 2x">
+                      <source type="image/webp" srcset="img/services-2.webp 1x, img/services-2@2x.webp 2x"> -->
+
+                      <source media="(max-width: 320px)" srcset="img/services-2m.jpg 1x, img/services-2m@2x.jpg 2x">
+                      <source media="(max-width: 1024px)" srcset="img/services-2t.jpg 1x, img/services-2t@2x.jpg 2x">
+                      <img src="./img/services-2.jpg" srcset="./img/services-2@2x.jpg 2x" alt="Фото печатной платы" class="service__img">
+                    </picture>
+                    <div class="service__btn">
+                      <svg class="service__icon" width="5" height="10" aria-hidden="true" focusable="false">
+                        <use xlink:href="img/sprite_auto.svg#services-arrow"></use>
+                      </svg>
+                      <span class="visually-hidden">Переход на страницу монтажа печатных плат.</span>
+                    </div>
+                  </article>
+                </a>
+              </li>
+              <li class="services__item">
+                <a href="" class="services__link">
+                  <article class="service">
+                    <h3>Комплектующие для&nbsp;светотехники</h3>
+                    <picture>
+                      <!-- <source type="image/webp" media="(max-width: 768px)" srcset="img/services-3m.webp 1x, img/services-3m@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1024px)" srcset="img/services-3t.webp 1x, img/services-3t@2x.webp 2x">
+                      <source type="image/webp" srcset="img/services-3.webp 1x, img/services-3@2x.webp 2x"> -->
+
+                      <source media="(max-width: 320px)" srcset="img/services-3m.jpg 1x, img/services-3m@2x.jpg 2x">
+                      <source media="(max-width: 1024px)" srcset="img/services-3t.jpg 1x, img/services-3t@2x.jpg 2x">
+                      <img src="./img/services-3.jpg" srcset="./img/services-3@2x.jpg 2x" alt="Фото печатной платы" class="service__img">
+                    </picture>
+                    <div class="service__btn">
+                      <svg class="service__icon" width="5" height="10" aria-hidden="true" focusable="false">
+                        <use xlink:href="img/sprite_auto.svg#services-arrow"></use>
+                      </svg>
+                      <span class="visually-hidden">Переход на страницу комплектующих.</span>
+                    </div>
+                  </article>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+
+
         <!-- <section class="intro">
           <div class="container">
             <h1>Тестовая страница.</h1>
@@ -147,8 +227,10 @@
             <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
             <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
           </div>
-        </section>
-      </main> -->
+        </section> -->
+      </main>
+
+      <!-- Footer -->
       <footer class="main-footer footer accordion">
         <div class="container main-footer__container">
           <section class="main-footer__socials">
@@ -196,7 +278,7 @@
           </section>
           <section class="main-footer__sections sections">
             <h3 class="sections__title accordion__btn">Разделы сайта</h3>
-            <div class="sections__wrap accordion__content accordion__content--close">
+            <div class="sections__wrap accordion__content">
               <ul class="sections__list">
                 <li class="sections__item">
                   <a class="sections__link" href="#">О Компании</a>

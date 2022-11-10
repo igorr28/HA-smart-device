@@ -13,26 +13,6 @@
     position: relative;
     margin-bottom: 15px;
   }
-
-  // &::after,
-  // &::before {
-  //   @include vp-767 {
-  //     position: absolute;
-  //     right: 0;
-  //     top: 8px;
-  //     content: "";
-  //     display: block;
-  //     width: 15px;
-  //     height: 1px;
-  //     background: #c4c4c4;
-  //   }
-  // }
-
-  // &::after {
-  //   @include vp-767 {
-  //     transform: rotate(90deg);
-  //   }
-  // }
 }
 
 .sections__wrap {
