@@ -217,6 +217,38 @@
           </div>
         </section>
 
+        <!-- Form -->
+        <section class="questions">
+          <div class="container questions__container">
+            <div class="questions__wrap">
+              <h2 class="visually-hidden">Форма обратной связи.</h2>
+              <h3>Остались вопросы? Задайте их нам!</h3>
+              <p>Мы проконсультируем Вас бесплатно</p>
+              <form class="questions__form form" action="https://echo.htmlacademy.ru/" method="get">
+                <label class="visually-hidden" for="name">Введите имя.</label>
+                <input type="text" id="name" name="name" placeholder="Имя" pattern="^[А-Яа-яЁёa-zA-Z\-\s]+$"
+                  maxlength="20" title="Разрешены буквы, пробелы и дефис" required>
+
+                <label class="visually-hidden" for="tel">Введите номер телефона.</label>
+                <input type="tel" id="tel" name="tel" placeholder="Телефон" maxlength="16"
+                  pattern="^\+7\s[(]\d{3}[)]\s\d{3}[-]\d{2}[-]\d{2}$" title="Введите 10 цифр" required>
+
+                <label class="visually-hidden" for="question">Введите ваш вопрос.</label>
+                <textarea id="question" name="question" cols="10" rows="6" placeholder="Ваш вопрос"
+                  maxlength="200"></textarea>
+
+                  <label class="form__control control">
+                    <input class="visually-hidden control__input" type="checkbox" name="consent" checked>
+                    <span class="control__mark-checkbox"></span>
+                    <span class="control__label">Я согласен на&nbsp;обработку персональных данных</span>
+                  </label>
+
+                <button class="btn form__button" type="submit">Задать вопрос</button>
+              </form>
+            </div>
+          </div>
+        </section>
+
 
 
         <!-- <section class="intro">

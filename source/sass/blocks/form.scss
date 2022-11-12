@@ -1,0 +1,35 @@
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 30px;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 15px;
+  background: rgba($color-black-pearl, 0.15);
+  border-radius: 3px;
+  border: none;
+  color: $color-default-white;
+}
+
+.form textarea {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  grid-column: 1/-1;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: rgba($color-default-white, 0.7);
+}
+
+.form__control {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+
+.form__button {
+  grid-column: 1/2;
+}

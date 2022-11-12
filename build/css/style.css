@@ -1434,6 +1434,107 @@ button,
   transition: 0.3s ease;
 }
 
+.questions {
+  padding-top: 170px;
+  padding-bottom: 250px;
+  background-color: #00b2ff;
+  background-image: url("../img/svg/form-triangle.svg");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 968px 100%;
+  color: #ffffff;
+}
+
+.questions__container {
+  background-image: url("../img/form-plane.png");
+  background-repeat: no-repeat;
+  background-position: 110px -3px;
+  background-size: 510px 285px;
+}
+
+.questions__wrap {
+  padding-left: 625px;
+  padding-right: 10px;
+}
+
+.questions h3 {
+  margin-bottom: 15px;
+  margin-top: 0;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.42;
+}
+
+.questions p {
+  margin-top: 0;
+  margin-bottom: 35px;
+}
+
+.form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 30px;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 15px;
+  background: rgba(4, 24, 39, 0.15);
+  border-radius: 3px;
+  border: none;
+  color: #ffffff;
+}
+
+.form textarea {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  grid-column: 1/-1;
+}
+
+.form input::-webkit-input-placeholder,
+.form textarea::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.form input::-moz-placeholder,
+.form textarea::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.form input:-ms-input-placeholder,
+.form textarea:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.form input::-ms-input-placeholder,
+.form textarea::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.form__control {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+}
+
+.form__button {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
