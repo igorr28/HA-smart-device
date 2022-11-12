@@ -2,9 +2,15 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px 30px;
+
+  @include vp-767 {
+    grid-template-columns: none;
+    column-gap: 0;
+  }
 }
 
-.form input,
+.form input[type="text"],
+.form input[type="tel"],
 .form textarea {
   width: 100%;
   padding: 15px;
@@ -12,6 +18,22 @@
   border-radius: 3px;
   border: none;
   color: $color-default-white;
+  transition: $trans-default;
+
+  &:hover {
+    background: rgba($color-black-pearl, 0.3);
+  }
+
+  &:focus {
+    outline: 2px solid $color-default-white;
+    outline-offset: 2px;
+    background: rgba($color-black-pearl, 0.3);
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
 }
 
 .form textarea {
@@ -28,8 +50,18 @@
 .form__control {
   grid-column: 2/3;
   grid-row: 3/4;
+
+  @include vp-767 {
+    grid-column: 1/-1;
+    grid-row: 5/6;
+  }
 }
 
 .form__button {
   grid-column: 1/2;
+
+  @include vp-767 {
+    grid-column: 1/-1;
+    grid-row: 4/5;
+  }
 }

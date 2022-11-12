@@ -667,6 +667,20 @@ button,
   transition: 0.3s ease;
 }
 
+.btn:focus-visible {
+  outline: 2px solid #00b2ff;
+  outline-offset: 2px;
+}
+
+.btn:active {
+  opacity: 0.7;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 .btn--primary {
   border: 1px solid #f2f5f7;
   max-width: 160px;
@@ -703,18 +717,20 @@ button,
   background-color: #00b2ff;
 }
 
-.btn:focus-visible {
-  outline: 2px solid #00b2ff;
-  outline-offset: 2px;
+.btn--quaternary {
+  max-width: 265px;
+  padding: 15px 25px;
+  font-size: 16px;
+  background-color: #041827;
 }
 
-.btn:active {
-  opacity: 0.7;
+.btn--quaternary:hover {
+  color: #041827;
+  background-color: #ffffff;
 }
 
-.btn:disabled {
-  opacity: 0.5;
-  pointer-events: none;
+.btn--quaternary:focus-visible {
+  outline-color: #ffffff;
 }
 
 .modal {
@@ -1441,20 +1457,20 @@ button,
   background-image: url("../img/svg/form-triangle.svg");
   background-repeat: no-repeat;
   background-position: left top;
-  background-size: 968px 100%;
+  background-size: 50.4166666667% 100%;
   color: #ffffff;
 }
 
 .questions__container {
   background-image: url("../img/form-plane.png");
   background-repeat: no-repeat;
-  background-position: 110px -3px;
-  background-size: 510px 285px;
+  background-position: 110px 82px;
+  background-size: 35.4166666667% auto;
 }
 
 .questions__wrap {
-  padding-left: 625px;
-  padding-right: 10px;
+  padding-left: 51.2295081967%;
+  padding-right: 0.8196721311%;
 }
 
 .questions h3 {
@@ -1479,7 +1495,8 @@ button,
   gap: 20px 30px;
 }
 
-.form input,
+.form input[type=text],
+.form input[type=tel],
 .form textarea {
   width: 100%;
   padding: 15px;
@@ -1487,6 +1504,30 @@ button,
   border-radius: 3px;
   border: none;
   color: #ffffff;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.form input[type=text]:hover,
+.form input[type=tel]:hover,
+.form textarea:hover {
+  background: rgba(4, 24, 39, 0.3);
+}
+
+.form input[type=text]:focus,
+.form input[type=tel]:focus,
+.form textarea:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+  background: rgba(4, 24, 39, 0.3);
+}
+
+.form input[type=text]:disabled,
+.form input[type=tel]:disabled,
+.form textarea:disabled {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .form textarea {
@@ -1533,6 +1574,47 @@ button,
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
+}
+
+.control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 10px;
+}
+
+.control__mark-checkbox {
+  position: relative;
+  display: block;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 2px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.control__mark-checkbox::before {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  content: "";
+  display: none;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/svg/checkbox-tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.control__input:checked + .control__mark-checkbox::before {
+  display: block;
+}
+
+.control__label {
+  font-size: 14px;
+  line-height: 16px;
 }
 
 /* @mixin hover-focus {
@@ -1747,6 +1829,29 @@ button,
   .service h3 {
     top: 40px;
     left: 45px;
+  }
+
+  .questions {
+    padding-top: 50px;
+    padding-bottom: 125px;
+    background-image: none;
+  }
+
+  .questions__container {
+    background-image: none;
+  }
+
+  .questions__wrap {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .questions h3 {
+    margin-bottom: 20px;
+  }
+
+  .questions p {
+    margin-bottom: 25px;
   }
 }
 
@@ -2014,6 +2119,42 @@ button,
   .service__btn {
     width: 40px;
     height: 40px;
+  }
+
+  .questions {
+    padding-bottom: 90px;
+  }
+
+  .questions h3 {
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+
+  .questions p {
+    margin-bottom: 40px;
+    font-size: 14px;
+  }
+
+  .form {
+    -ms-grid-columns: none;
+    grid-template-columns: none;
+    -webkit-column-gap: 0;
+    -moz-column-gap: 0;
+    column-gap: 0;
+  }
+
+  .form__control {
+    grid-column: 1/-1;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5/6;
+  }
+
+  .form__button {
+    grid-column: 1/-1;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
   }
 }
 
