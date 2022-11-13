@@ -358,17 +358,35 @@
     <div class="modal modal--preload" data-modal="feedback">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content" style="background-color: green;">
-          <p class="modal__description">Обычная модалка</p>
+        <div class="modal__content">
+          <p class="modal__title">Закажите звонок</p>
+          <p class="modal__description">Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
             <svg width="15" height="15">
               <use xlink:href="img/sprite_auto.svg#icon-close"></use>
             </svg>
           </button>
-          <input type="text" name="" id="">
-          <input type="text" name="" id="">
-          <textarea name="" id="" cols="30" rows="10"></textarea>
-          <button type="submit">submit</button>
+          <form class="questions__form form" action="https://echo.htmlacademy.ru/" method="get">
+            <label class="visually-hidden" for="name">Введите имя.</label>
+            <input type="text" id="name" name="name" placeholder="Имя" pattern="^[А-Яа-яЁёa-zA-Z\-\s]+$"
+              maxlength="20" title="Разрешены буквы, пробелы и дефис" required>
+
+            <label class="visually-hidden" for="tel">Введите номер телефона.</label>
+            <input type="tel" id="tel" name="tel" placeholder="Телефон" maxlength="16"
+              pattern="^\+7\s[(]\d{3}[)]\s\d{3}[-]\d{2}[-]\d{2}$" title="Введите 10 цифр" required>
+
+            <label class="visually-hidden" for="question">Введите ваш вопрос.</label>
+            <textarea id="question" name="question" cols="10" rows="6" placeholder="Ваш вопрос"
+              maxlength="200"></textarea>
+
+              <label class="form__control control">
+                <input class="visually-hidden control__input" type="checkbox" name="consent" checked>
+                <span class="control__mark-checkbox"></span>
+                <span class="control__label">Я согласен на&nbsp;обработку персональных данных</span>
+              </label>
+
+            <button class="btn btn--quaternary form__button" type="submit">Отправить</button>
+          </form>
         </div>
       </div>
     </div>
