@@ -144,6 +144,7 @@ export class Modals {
 
     this._openedModalElement = document.querySelector('.modal.is-active');
 
+
     if (this._openedModalElement) {
       this._enableScrolling = false;
       this.close(this._openedModalElement.dataset.modal);
@@ -151,6 +152,9 @@ export class Modals {
 
     this._setSettings(modalName);
     modal.classList.add('is-active');
+    setTimeout(() => {
+      modal.querySelector('input[name="name"]').focus();
+    }, 100);
 
     if (!this._openedModalElement) {
       this._scrollLock.disableScrolling();

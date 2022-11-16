@@ -1,13 +1,13 @@
 .service {
   position: relative;
-  max-height: 650px;
+  height: 650px;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+
 
   @include vp-1023 {
-    max-height: 250px;
+    height: 250px;
   }
 
   &::before {
@@ -46,8 +46,14 @@
   }
 }
 
+.service__img-wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 .service__img {
-  object-fit: contain;
+  max-width: none;
 }
 
 .service__btn {

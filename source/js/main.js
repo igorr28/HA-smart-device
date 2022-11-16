@@ -2,6 +2,8 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import './modules/show-about';
 import './modules/accordion';
+import './modules/smooth-scroll';
+import './modules/mask-phone';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
