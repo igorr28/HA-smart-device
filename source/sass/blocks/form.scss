@@ -80,3 +80,9 @@
   grid-column: 1/-1;
     grid-row: 4/5;
 }
+
+.form .is-error {
+  outline: 1px solid red;
+  outline-offset: 5px;
+  color: red;
+}

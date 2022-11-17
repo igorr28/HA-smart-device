@@ -3,7 +3,9 @@ import {initModals} from './modules/modals/init-modals';
 import './modules/show-about';
 import './modules/accordion';
 import './modules/smooth-scroll';
-import './modules/mask-phone';
+//import './modules/mask-phone';
+import './modules/form-validation';
+
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {

@@ -218,21 +218,20 @@
               <h2 class="visually-hidden">Форма обратной связи.</h2>
               <h3>Остались вопросы? Задайте&nbsp;их&nbsp;нам!</h3>
               <p>Мы проконсультируем Вас бесплатно</p>
-              <form class="questions__form form" action="https://echo.htmlacademy.ru/" method="get">
+              <form class="questions__form form" name="questions-form" action="https://echo.htmlacademy.ru/" method="post">
                 <label class="visually-hidden" for="name">Введите имя.</label>
-                <input type="text" id="name" name="name" placeholder="Имя" pattern="^[А-Яа-яЁёa-zA-Z\-\s]+$"
+                <input type="text" id="name" name="name" data-validate placeholder="Имя" pattern="^[А-Яа-яЁёa-zA-Z\-\s]+$"
                   maxlength="20" title="Разрешены буквы, пробелы и дефис" required>
 
                 <label class="visually-hidden" for="tel">Введите номер телефона.</label>
-                <input type="tel" id="tel" name="tel" placeholder="Телефон" maxlength="16"
-                  pattern="^\+7\s[(]\d{3}[)]\s\d{3}[-]\d{2}[-]\d{2}$" title="Введите 10 цифр" required>
+                <input type="tel" id="tel" name="tel" data-validate placeholder="Телефон" maxlength="16" pattern="^\+7[(]\d{3}[)]\d{3}[-]\d{2}[-]\d{2}$" title="Введите номер телефона в формте +7(000)000-00-00" required>
 
                 <label class="visually-hidden" for="question">Введите ваш вопрос.</label>
                 <textarea id="question" name="question" cols="10" rows="6" placeholder="Ваш вопрос"
                   maxlength="200"></textarea>
 
                   <label class="form__control control">
-                    <input class="visually-hidden control__input" type="checkbox" name="consent" checked>
+                    <input class="visually-hidden control__input" type="checkbox" name="consent" data-validate checked required>
                     <span class="control__mark-checkbox"></span>
                     <span class="control__label">Я согласен на&nbsp;обработку персональных данных</span>
                   </label>
@@ -360,7 +359,7 @@
               <use xlink:href="img/sprite_auto.svg#icon-close"></use>
             </svg>
           </button>
-          <form class="questions__form form form--type-column" action="https://echo.htmlacademy.ru/" method="get">
+          <form class="modal__form form form--type-column" action="https://echo.htmlacademy.ru/" method="get">
             <label class="visually-hidden" for="name">Введите имя.</label>
             <input type="text" id="name" name="name" placeholder="Имя" pattern="^[А-Яа-яЁёa-zA-Z\-\s]+$"
               maxlength="20" title="Разрешены буквы, пробелы и дефис" required>
@@ -398,7 +397,7 @@
         </div>
       </div>
     </div> -->
-    
+
     <script src="https://unpkg.com/imask"></script>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
