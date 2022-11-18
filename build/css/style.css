@@ -1545,6 +1545,31 @@ button,
   column-gap: 0;
 }
 
+.form input::-webkit-input-placeholder,
+.form textarea::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.form input::-moz-placeholder,
+.form textarea::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.form input:-ms-input-placeholder,
+.form textarea:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.form input::-ms-input-placeholder,
+.form textarea::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
 .form input[type=text],
 .form input[type=tel],
 .form textarea {
@@ -1569,7 +1594,6 @@ button,
 .form input[type=tel]:focus,
 .form textarea:focus {
   outline: 2px solid #ffffff;
-  outline-offset: 2px;
   background: rgba(4, 24, 39, 0.3);
 }
 
@@ -1580,10 +1604,35 @@ button,
   pointer-events: none;
 }
 
+.form input[type=text]:invalid,
+.form input[type=tel]:invalid,
+.form textarea:invalid {
+  color: red;
+  outline: 1px solid red;
+  outline-offset: 2px;
+}
+
 .form textarea {
   padding-top: 25px;
   padding-bottom: 25px;
   grid-column: 1/-1;
+}
+
+.form__error {
+  position: absolute;
+  z-index: 10;
+  display: block;
+  padding: 3px 10px;
+  margin-top: -7px;
+  color: red;
+  font-size: 13px;
+  line-height: 1.15;
+  background-color: #ffffff;
+  border-radius: 3px;
+}
+
+.form__error--modal {
+  z-index: 1001;
 }
 
 .form input::-webkit-input-placeholder,
@@ -1638,12 +1687,6 @@ button,
   -ms-grid-row: 4;
   -ms-grid-row-span: 1;
   grid-row: 4/5;
-}
-
-.form .is-error {
-  outline: 1px solid red;
-  outline-offset: 5px;
-  color: red;
 }
 
 .control {
@@ -1704,6 +1747,11 @@ button,
   -ms-transform: none;
   transform: none;
   pointer-events: none;
+}
+
+.control__input:invalid + .control__mark-checkbox {
+  outline: 2px solid red;
+  outline-offset: 2px;
 }
 
 .control__label {

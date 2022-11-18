@@ -31,7 +31,6 @@
 
   &:focus {
     outline: 2px solid $color-default-white;
-    outline-offset: 2px;
     background: rgba($color-black-pearl, 0.3);
   }
 
@@ -39,12 +38,35 @@
     opacity: 0.3;
     pointer-events: none;
   }
+
+  &:invalid {
+    color: $color-red;
+    outline: 1px solid $color-red;
+    outline-offset: 2px;
+  }
 }
 
 .form textarea {
   padding-top: 25px;
   padding-bottom: 25px;
   grid-column: 1/-1;
+}
+
+.form__error {
+  position: absolute;
+  z-index: 10;
+  display: block;
+  padding: 3px 10px;
+  margin-top: -7px;
+  color: $color-red;
+  font-size: 13px;
+  line-height: 1.15;
+  background-color: $color-default-white;
+  border-radius: 3px;
+
+  &--modal {
+    z-index: 1001;
+  }
 }
 
 .form input::placeholder,
@@ -78,11 +100,5 @@
 
 .form--type-column .form__button {
   grid-column: 1/-1;
-    grid-row: 4/5;
-}
-
-.form .is-error {
-  outline: 1px solid red;
-  outline-offset: 5px;
-  color: red;
+  grid-row: 4/5;
 }

@@ -1,12 +1,12 @@
-const smoothLinks = document.querySelectorAll(".smooth-link");
+const smoothLinks = document.querySelectorAll('.smooth-link');
 for (let smoothLink of smoothLinks) {
-  smoothLink.addEventListener("click", function (e) {
+  smoothLink.addEventListener('click', function (e) {
     e.preventDefault();
     const href = smoothLink.getAttribute('href');
 
     document.querySelector(href).scrollIntoView({
-      behavior: "smooth",
-      block: "start",
+      behavior: 'smooth',
+      block: 'start',
     });
   });
 }

@@ -1,5 +1,6 @@
 import {ScrollLock} from '../../utils/scroll-lock';
 import {FocusLock} from '../../utils/focus-lock';
+//import {modalForm, resetErrors} from '../modules/form-validation';
 
 export class Modals {
   constructor(settings = {}) {

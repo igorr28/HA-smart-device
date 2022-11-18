@@ -40,15 +40,15 @@
   list-style: none;
 
   @include vp-1023 {
-   display: block;
-   margin-bottom: -30px;
+    display: block;
+    margin-bottom: -30px;
   }
 }
 
 .services__item {
   @include vp-1023 {
     margin-bottom: 30px;
-   }
+  }
 }
 
 .services__link {
