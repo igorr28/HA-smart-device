@@ -39,7 +39,7 @@
     pointer-events: none;
   }
 
-  &:invalid {
+  &:not(:placeholder-shown):invalid {
     color: $color-red;
     outline: 1px solid $color-red;
     outline-offset: 2px;
