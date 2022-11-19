@@ -2313,3 +2313,9 @@ button,
     background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/main-bg-mobile@2x.jpg");
   }
 }
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .questions__container {
+    background-image: url("../img/form-plane@2x.png");
+  }
+}

@@ -103,7 +103,7 @@ for (let form of forms) {
           checkFormElement(elem);
 
           if (elem.classList.contains('is-error')) {
-            arrayValidElements.push(false)
+            arrayValidElements.push(false);
           } else {
             arrayValidElements.push(true);
           }
@@ -111,13 +111,8 @@ for (let form of forms) {
       });
 
       const isValidForm = arrayValidElements.every((elem) => {
-        if (elem === true) {
-          return true;
-        } else {
-          return false;
-        }
+        return (elem === true);
       });
-      console.log(isValidForm);
 
       if (isValidForm) {
         form.submit();

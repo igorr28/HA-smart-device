@@ -25,6 +25,10 @@
   background-position: 110px 82px;
   background-size: calc(510 / 1440) *100% auto;
 
+  @include retina {
+    background-image: url("../img/form-plane@2x.png");
+  }
+
   @include vp-1023 {
     background-image: none;
   }
