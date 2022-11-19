@@ -1545,31 +1545,6 @@ button,
   column-gap: 0;
 }
 
-.form input::-webkit-input-placeholder,
-.form textarea::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.form input::-moz-placeholder,
-.form textarea::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.form input:-ms-input-placeholder,
-.form textarea:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.form input::-ms-input-placeholder,
-.form textarea::-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.form input::placeholder,
-.form textarea::placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
 .form input[type=text],
 .form input[type=tel],
 .form textarea {
@@ -1604,14 +1579,6 @@ button,
   pointer-events: none;
 }
 
-.form input[type=text]:invalid,
-.form input[type=tel]:invalid,
-.form textarea:invalid {
-  color: red;
-  outline: 1px solid red;
-  outline-offset: 2px;
-}
-
 .form textarea {
   padding-top: 25px;
   padding-bottom: 25px;
@@ -1624,10 +1591,10 @@ button,
   display: block;
   padding: 3px 10px;
   margin-top: -7px;
-  color: red;
+  color: #ff0000;
   font-size: 13px;
   line-height: 1.15;
-  background-color: #ffffff;
+  background-color: #ebebeb;
   border-radius: 3px;
 }
 
@@ -1747,11 +1714,6 @@ button,
   -ms-transform: none;
   transform: none;
   pointer-events: none;
-}
-
-.control__input:invalid + .control__mark-checkbox {
-  outline: 2px solid red;
-  outline-offset: 2px;
 }
 
 .control__label {

@@ -1,14 +1,5 @@
 const forms = document.forms;
-const questionsForm = document.forms[0];
 const modalForm = document.forms[1];
-//const formElements = Array.from(form.elements);
-
-// formElements.forEach((elem) => {
-// elem.addEventListener('input', (e) => {
-//   console.log(1, elem.value);
-//   checkFormElement(elem);
-// })
-// });
 
 const checkFormElement = (elem) => {
   const inputValue = elem.value;
@@ -17,12 +8,18 @@ const checkFormElement = (elem) => {
     if (elem.type === 'checkbox') {
       if (!elem.checked) {
         showErrorElem(elem.parentElement, 'Чтобы продолжить, установите этот флажок');
+        elem.classList.add('is-error');
         return;
+      } else {
+        elem.classList.remove('is-error');
       }
     } else {
       if (!inputValue.length) {
         showErrorElem(elem, 'Поле обязательно для заполнения');
+        elem.classList.add('is-error');
         return;
+      } else {
+        elem.classList.remove('is-error');
       }
     }
   }
@@ -31,13 +28,15 @@ const checkFormElement = (elem) => {
     const reg = new RegExp(elem.getAttribute('pattern'));
     if (!reg.test(inputValue)) {
       showErrorElem(elem, elem.title);
+      elem.classList.add('is-error');
       return;
+    } else {
+      elem.classList.remove('is-error');
     }
   }
-
 };
 
-function getCoords(elem) {
+const getCoords = (elem) => {
   let box = elem.getBoundingClientRect();
   return {
     top: box.top + window.pageYOffset,
@@ -45,11 +44,16 @@ function getCoords(elem) {
     bottom: box.bottom + window.pageYOffset,
     left: box.left + window.pageXOffset,
   };
-}
+};
 
 const showErrorElem = (elem, message) => {
   const errorElem = document.createElement('span');
-  (elem.closest('.modal')) ? errorElem.classList.add('form__error', 'form__error--modal') : errorElem.classList.add('form__error');
+
+  if (elem.closest('.modal')) {
+    errorElem.classList.add('form__error', 'form__error--modal');
+  } else {
+    errorElem.classList.add('form__error');
+  }
   errorElem.textContent = message;
   let coords = getCoords(elem);
   errorElem.style.left = coords.left + 'px';
@@ -90,8 +94,34 @@ for (let form of forms) {
   form.addEventListener('click', (e) => {
     const target = e.target;
     if (target.classList.contains('form__button')) {
+      const formElements = Array.from(form.elements);
+      const arrayValidElements = [];
       e.preventDefault();
       resetErrors(form);
+      formElements.forEach((elem) => {
+        if (elem.hasAttribute('data-validate')) {
+          checkFormElement(elem);
+
+          if (elem.classList.contains('is-error')) {
+            arrayValidElements.push(false)
+          } else {
+            arrayValidElements.push(true);
+          }
+        }
+      });
+
+      const isValidForm = arrayValidElements.every((elem) => {
+        if (elem === true) {
+          return true;
+        } else {
+          return false;
+        }
+      });
+      console.log(isValidForm);
+
+      if (isValidForm) {
+        form.submit();
+      }
     }
   });
 }

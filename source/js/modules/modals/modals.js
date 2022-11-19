@@ -1,6 +1,6 @@
 import {ScrollLock} from '../../utils/scroll-lock';
 import {FocusLock} from '../../utils/focus-lock';
-//import {modalForm, resetErrors} from '../modules/form-validation';
+import {modalForm, resetErrors} from '../../modules/form-validation';
 
 export class Modals {
   constructor(settings = {}) {
@@ -191,6 +191,7 @@ export class Modals {
     modal.classList.remove('is-active');
     this._removeListeners(modal);
     this._stopInteractive(modal);
+    resetErrors(modalForm);
 
     if (this._closeCallback) {
       this._closeCallback();

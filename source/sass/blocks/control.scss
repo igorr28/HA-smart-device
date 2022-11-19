@@ -47,10 +47,10 @@
   pointer-events: none;
 }
 
-.control__input:invalid + .control__mark-checkbox {
-  outline: 2px solid $color-red;
-  outline-offset: 2px;
-}
+// .control__input:not(:focus):invalid + .control__mark-checkbox {
+//   outline: 2px solid $color-red;
+//   outline-offset: 2px;
+// }
 
 .control__label {
   font-size: 14px;

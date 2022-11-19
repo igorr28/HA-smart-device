@@ -1,3 +1,5 @@
+import IMask from 'imask';
+
 const tel = document.getElementById('tel');
 const telModal = document.getElementById('tel-modal');
 const maskOptions = {

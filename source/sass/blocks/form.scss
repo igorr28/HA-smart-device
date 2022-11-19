@@ -39,11 +39,12 @@
     pointer-events: none;
   }
 
-  &:not(:placeholder-shown):invalid {
-    color: $color-red;
-    outline: 1px solid $color-red;
-    outline-offset: 2px;
-  }
+  //работает неадекватно почему-то
+  // &:not(:placeholder-shown):invalid {
+  //   color: $color-red;
+  //   outline: 1px solid $color-red;
+  //   outline-offset: 2px;
+  // }
 }
 
 .form textarea {
@@ -61,7 +62,7 @@
   color: $color-red;
   font-size: 13px;
   line-height: 1.15;
-  background-color: $color-default-white;
+  background-color: $color-whisper;
   border-radius: 3px;
 
   &--modal {
