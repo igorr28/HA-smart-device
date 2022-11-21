@@ -59,13 +59,13 @@
     }
 
     @include vp-374 {
-      left: calc(-52 / 374) *100%;
-      width: calc(52 * 2 / 374) *100% + 100%;
+      left: calc(-34 / 374) *100%;
+      width: calc(34 * 2 / 374) *100% + 100%;
     }
 
     @include vp-320 {
-      left: calc(-25 / 320) *100%;
-      width: calc(25 * 2 / 320) *100% + 100%;
+      left: -25px;
+      width: 320px;
     }
   }
 }
@@ -124,13 +124,13 @@
     }
 
     @include vp-374 {
-      left: calc(-52 / 374) *100%;
-      width: calc(52 * 2 / 374) *100% + 100%;
+      left: calc(-34 / 374) *100%;
+      width: calc(34 * 2 / 374) *100% + 100%;
     }
 
     @include vp-320 {
-      left: calc(-25 / 320) *100%;
-      width: calc(25 * 2 / 320) *100% + 100%;
+      left: -25px;
+      width: 320px;
     }
   }
 }
@@ -167,13 +167,13 @@
     }
 
     @include vp-374 {
-      left: calc(-52 / 374) *100%;
-      width: calc(52 * 2 / 374) *100% + 100%;
+      left: calc(-34 / 374) *100%;
+      width: calc(34 * 2 / 374) *100% + 100%;
     }
 
     @include vp-320 {
-      left: calc(-25 / 320) *100%;
-      width: calc(25 * 2 / 320) *100% + 100%;
+      left: -25px;
+      width: 320px;
     }
   }
 }
@@ -181,6 +181,7 @@
 .main-footer__contacts-title {
   margin-bottom: 25px;
   margin-top: 0;
+  padding-right: 26px;
   font-family: $ff-condensed;
   font-weight: 400;
   font-size: 15px;

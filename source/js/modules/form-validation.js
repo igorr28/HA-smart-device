@@ -80,45 +80,48 @@ const resetErrors = (form) => {
   });
 };
 
-for (let form of forms) {
-  form.setAttribute('novalidate', 'novalidate');
-  form.addEventListener('input', (e) => {
-    const target = e.target;
-    resetErrorElem(target);
+const initFormValidation = () => {
+  if (forms.length) {
+    for (let form of forms) {
+      form.setAttribute('novalidate', 'novalidate');
+      form.addEventListener('input', (e) => {
+        const target = e.target;
+        resetErrorElem(target);
 
-    if (target.hasAttribute('data-validate')) {
-      checkFormElement(target);
-    }
-  });
-
-  form.addEventListener('click', (e) => {
-    const target = e.target;
-    if (target.classList.contains('form__button')) {
-      const formElements = Array.from(form.elements);
-      const arrayValidElements = [];
-      e.preventDefault();
-      resetErrors(form);
-      formElements.forEach((elem) => {
-        if (elem.hasAttribute('data-validate')) {
-          checkFormElement(elem);
-
-          if (elem.classList.contains('is-error')) {
-            arrayValidElements.push(false);
-          } else {
-            arrayValidElements.push(true);
-          }
+        if (target.hasAttribute('data-validate')) {
+          checkFormElement(target);
         }
       });
 
-      const isValidForm = arrayValidElements.every((elem) => {
-        return (elem === true);
+      form.addEventListener('click', (e) => {
+        const target = e.target;
+        if (target.classList.contains('form__button')) {
+          const formElements = Array.from(form.elements);
+          const arrayValidElements = [];
+          e.preventDefault();
+          resetErrors(form);
+          formElements.forEach((elem) => {
+            if (elem.hasAttribute('data-validate')) {
+              checkFormElement(elem);
+
+              if (elem.classList.contains('is-error')) {
+                arrayValidElements.push(false);
+              } else {
+                arrayValidElements.push(true);
+              }
+            }
+          });
+          const isValidForm = arrayValidElements.every((elem) => {
+            return (elem === true);
+          });
+
+          if (isValidForm) {
+            form.submit();
+          }
+        }
       });
-
-      if (isValidForm) {
-        form.submit();
-      }
     }
-  });
-}
+  }
+};
 
-export {modalForm, resetErrors};
+export {modalForm, resetErrors, initFormValidation};

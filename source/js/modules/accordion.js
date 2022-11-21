@@ -23,32 +23,38 @@ const accordionHandler = (e) => {
   }
 };
 
-const breakpoint = window.matchMedia('(max-width: 768px)');
-const breakpointChecker = () => {
-  if (breakpoint.matches) {
-    accordionContents = document.querySelectorAll('.accordion__content');
-    accordionButtons = document.querySelectorAll('.accordion__btn');
+const initAccordion = () => {
+  if (accordion) {
+    const breakpoint = window.matchMedia('(max-width: 768px)');
+    const breakpointChecker = () => {
+      if (breakpoint.matches) {
+        accordionContents = document.querySelectorAll('.accordion__content');
+        accordionButtons = document.querySelectorAll('.accordion__btn');
 
-    for (let accordionContent of accordionContents) {
-      accordionContent.style.height = '0px';
-    }
-    for (let accordionButton of accordionButtons) {
-      accordionButton.classList.add('accordion__btn--close');
-    }
-    accordion.addEventListener('click', accordionHandler);
-  } else {
-    accordionContents = document.querySelectorAll('.accordion__content');
-    accordionButtons = document.querySelectorAll('.accordion__btn');
+        for (let accordionContent of accordionContents) {
+          accordionContent.style.height = '0px';
+        }
+        for (let accordionButton of accordionButtons) {
+          accordionButton.classList.add('accordion__btn--close');
+        }
+        accordion.addEventListener('click', accordionHandler);
+      } else {
+        accordionContents = document.querySelectorAll('.accordion__content');
+        accordionButtons = document.querySelectorAll('.accordion__btn');
 
-    for (let accordionContent of accordionContents) {
-      accordionContent.style.height = '';
-    }
-    for (let accordionButton of accordionButtons) {
-      accordionButton.classList.remove('accordion__btn--close');
-    }
+        for (let accordionContent of accordionContents) {
+          accordionContent.style.height = '';
+        }
+        for (let accordionButton of accordionButtons) {
+          accordionButton.classList.remove('accordion__btn--close');
+        }
 
-    accordion.removeEventListener('click', accordionHandler);
+        accordion.removeEventListener('click', accordionHandler);
+      }
+    };
+    breakpoint.addListener(breakpointChecker);
+    breakpointChecker();
   }
 };
-breakpoint.addListener(breakpointChecker);
-breakpointChecker();
+
+export {initAccordion};
