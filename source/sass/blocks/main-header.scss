@@ -19,10 +19,15 @@
     padding-top: 15px;
     padding-bottom: 20px;
   }
+
+  @include vp-374 {
+    padding-top: 12px;
+    padding-bottom: 18px;
+  }
 }
 
 .main-header__logo {
-  @include vp-1023 {
+  @include vp-1439 {
     margin-right: 30px;
   }
 }
@@ -30,23 +35,32 @@
 .main-header__container {
   display: flex;
   align-items: center;
+
+  @include vp-1023 {
+    align-items: start;
+  }
 }
 
 .main-header__contacts {
-  margin-left: calc(160 / 1220) *100%;
+  margin-left: calc(172 / 1220) *100%;
+  margin-right: calc(30 / 1220) *100%;
   flex-grow: 1;
 
   @include vp-1439 {
-    margin-left: calc(65 / 1220) *100%;
+    margin-left: auto;
   }
 
   @include vp-1023 {
-    margin-right: calc(20 / 770) *100%;
+    margin-right: calc(20 / 670) *100%;
     margin-left: auto;
   }
 
   @include vp-767 {
     margin-right: calc(10 / 770) *100%;
+  }
+
+  @include vp-374 {
+    margin-right: calc(10 / 270) *100%;
   }
 }
 

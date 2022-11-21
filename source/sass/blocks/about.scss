@@ -1,14 +1,19 @@
 .about {
   padding-top: 60px;
-  padding-bottom: 100px;
+  padding-bottom: 94px;
 
   @include vp-1023 {
-    padding-top: 40px;
-    padding-bottom: 80px;
+    padding-top: 38px;
+    padding-bottom: 84px;
   }
 
   @include vp-767 {
     padding-top: 25px;
+  }
+
+  @include vp-374 {
+    padding-top: 15px;
+    padding-bottom: 79px;
   }
 }
 
@@ -29,13 +34,17 @@
   margin-left: 100px;
 
   @include vp-1023 {
-    margin-left: 30px;
+    margin-left: 24px;
+  }
+
+  @include vp-374 {
+    margin-left: 0;
   }
 }
 
 .about__desc h2 {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-family: $ff-condensed;
   font-weight: 400;
   font-size: 36px;
@@ -53,10 +62,15 @@
   @include vp-767 {
     font-size: 14px;
   }
+
+  @include vp-374 {
+    margin-bottom: 18px;
+    line-height: 19px;
+  }
 }
 
 .about__text {
-  height: 170px;
+  height: 162px;
   overflow: hidden;
   transition: $trans-600;
 
@@ -67,8 +81,20 @@
   @include vp-767 {
     height: 200px;
   }
+
+  @include vp-374 {
+    height: 211px;
+  }
 }
 
 .about__btn {
-  margin-top: 20px;
+  margin-top: 30px;
+
+  @include vp-1023 {
+    margin-top: 22px;
+  }
+
+  @include vp-374 {
+    margin-top: 12px;
+  }
 }

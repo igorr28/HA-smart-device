@@ -32,24 +32,26 @@
             </div>
             <span class="visually-hidden">Логотип компании Smart Device.</span>
           </a>
-          <ul class="contacts main-header__contacts">
-            <li class="contacts__item">
-              <a class="contacts__link" href="mailto:info@sd.ru" aria-label="Отправить письмо на info@sd.ru.">
-                <svg class="contacts__link-img" width="20" height="20" aria-hidden="true" focusable="false">
-                  <use xlink:href="img/sprite_auto.svg#email"></use>
-                </svg>
-                <span class="contacts__link-text">info@sd.ru</span>
-              </a>
-            </li>
-            <li class="contacts__item">
-              <a class="contacts__link" href="tel:+78125556666" aria-label="Позвонить по номеру +7 (495) 000 52 52.">
-                <svg class="contacts__link-img" width="20" height="20" aria-hidden="true" focusable="false">
-                  <use xlink:href="img/sprite_auto.svg#phone-call"></use>
-                </svg>
-                <span class="contacts__link-text">+7&nbsp;(495)&nbsp;000&nbsp;52&nbsp;52</span>
-              </a>
-            </li>
-          </ul>
+          <div class="contacts main-header__contacts">
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <a class="contacts__link" href="mailto:info@sd.ru" aria-label="Отправить письмо на info@sd.ru.">
+                  <svg class="contacts__link-img" width="20" height="20" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite_auto.svg#email"></use>
+                  </svg>
+                  <span class="contacts__link-text">info@sd.ru</span>
+                </a>
+              </li>
+              <li class="contacts__item">
+                <a class="contacts__link" href="tel:+78125556666" aria-label="Позвонить по номеру +7 (495) 000 52 52.">
+                  <svg class="contacts__link-img" width="20" height="20" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite_auto.svg#phone-call"></use>
+                  </svg>
+                  <span class="contacts__link-text">+7&nbsp;(495)&nbsp;000&nbsp;52&nbsp;52</span>
+                </a>
+              </li>
+            </ul>
+          </div>
           <button class="btn btn--primary main-header__btn"  type="button" data-open-modal="feedback">Заказать звонок</button>
         </div>
       </header>
@@ -60,12 +62,14 @@
         <!-- Promo -->
         <section class="promo">
           <div class="container">
-            <h2>Печатные платы</h2>
-            <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-            <a class="btn btn--secondary promo__link smooth-link" href="#order">
-              <span class="promo__link-text">Получить бесплатную консультацию</span>
-              <span class="promo__link-text-mobile">бесплатная консультация</span>
-            </a>
+            <div class="promo__content">
+              <h2>Печатные платы</h2>
+              <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
+              <a class="btn btn--secondary promo__link smooth-link" href="#order">
+                <span class="promo__link-text">Получить бесплатную консультацию</span>
+                <span class="promo__link-text-mobile">бесплатная консультация</span>
+              </a>
+            </div>
           </div>
         </section>
 
@@ -97,7 +101,7 @@
                 <svg class="advantages__icon" width="35" height="35" aria-hidden="true" focusable="false">
                   <use xlink:href="img/sprite_auto.svg#adv-detective"></use>
                 </svg>
-                <div class="advantages__content">
+                <div class="advantages__content advantages__content--size-low">
                   <h3>Полная конфиденциальность</h3>
                   <p>По желанию клиента  мы обеспечиваем полную конфиденциальность.
                   </p>
@@ -107,9 +111,9 @@
                 <svg class="advantages__icon" width="35" height="35" aria-hidden="true" focusable="false">
                   <use xlink:href="img/sprite_auto.svg#adv-tag"></use>
                 </svg>
-                <div class="advantages__content">
+                <div class="advantages__content advantages__content--size-low">
                   <h3>Персонализация стоимости</h3>
-                  <p>Мы  подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.
+                  <p>Мы  подбираем определенную&nbsp;фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.
                   </p>
                 </div>
               </li>
@@ -130,7 +134,7 @@
               <h2>О компании</h2>
               <div class="about__text">
                 <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
-                <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
+                <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные&nbsp;платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
                 <p>Smart Device - это команда профессионалов. Через нас прошло более 1 000 000 клиентов, 70% из которых продолжают сотрудничество по сей день. На данный момент насчитывается более 14 офисов по всей стране и 20 городов присутствия.</p>
                 <p>Мы стремимся к постоянному развитию и повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и время наших клиентов</p>
               </div>
@@ -148,14 +152,14 @@
             </h2>
             <ul class="services__list">
               <li class="services__item">
-                <a href="" class="services__link">
+                <a href="#" class="services__link">
                   <article class="service">
                     <h3>Производство печатных плат</h3>
                     <div class="service__img-wrap">
                       <picture>
                         <source type="image/webp" srcset="img/services.webp 1x, img/services@2x.webp 2x">
 
-                        <img src="./img/services.jpg" srcset="./img/services@2x.jpg 2x" alt="Фото печатной платы" class="service__img">
+                        <img class="service__img" src="./img/services.jpg" srcset="./img/services@2x.jpg 2x" alt="Фото печатной платы" >
                       </picture>
                     </div>
                     <div class="service__btn">
@@ -168,14 +172,14 @@
                 </a>
               </li>
               <li class="services__item">
-                <a href="" class="services__link">
+                <a href="#" class="services__link">
                   <article class="service">
                     <h3>Монтаж печатных плат</h3>
                     <div class="service__img-wrap">
                       <picture>
                         <source type="image/webp" srcset="img/services.webp 1x, img/services@2x.webp 2x">
 
-                        <img src="./img/services.jpg" srcset="./img/services@2x.jpg 2x" alt="Фото печатной платы" class="service__img">
+                        <img class="service__img service__img--center" src="./img/services.jpg" srcset="./img/services@2x.jpg 2x" alt="Фото печатной платы" >
                       </picture>
                     </div>
                     <div class="service__btn">
@@ -188,14 +192,14 @@
                 </a>
               </li>
               <li class="services__item">
-                <a href="" class="services__link">
+                <a href="#" class="services__link">
                   <article class="service">
                     <h3>Комплектующие для&nbsp;светотехники</h3>
                     <div class="service__img-wrap">
                       <picture>
                         <source type="image/webp" srcset="img/services.webp 1x, img/services@2x.webp 2x">
 
-                        <img src="./img/services.jpg" srcset="./img/services@2x.jpg 2x" alt="Фото печатной платы" class="service__img">
+                        <img class="service__img service__img--right" src="./img/services.jpg" srcset="./img/services@2x.jpg 2x" alt="Фото печатной платы" >
                       </picture>
                     </div>
                     <div class="service__btn">
@@ -228,10 +232,10 @@
 
                 <label class="visually-hidden" for="question">Введите ваш вопрос.</label>
                 <textarea id="question" name="question" cols="10" rows="6" placeholder="Ваш вопрос"
-                  maxlength="20"></textarea>
+                  maxlength="150"></textarea>
 
                   <label class="form__control control">
-                    <input class="visually-hidden control__input" type="checkbox" name="consent" data-validate required>
+                    <input type="checkbox" name="consent" data-validate required>
                     <span class="control__mark-checkbox"></span>
                     <span class="control__label">Я согласен на&nbsp;обработку персональных данных</span>
                   </label>
@@ -266,6 +270,14 @@
               <li class="socials__item">
                 <a class="socials__link" href="#">
                   <svg class="socials__link-img"  width="30" height="30" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite_auto.svg#ok"></use>
+                  </svg>
+                  <span class="visually-hidden">Одноклассники.</span>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link" href="#">
+                  <svg class="socials__link-img"  width="30" height="30" aria-hidden="true" focusable="false">
                     <use xlink:href="img/sprite_auto.svg#vk"></use>
                   </svg>
                   <span class="visually-hidden">Вконтакте.</span>
@@ -277,14 +289,6 @@
                     <use xlink:href="img/sprite_auto.svg#pinterest"></use>
                   </svg>
                   <span class="visually-hidden">Пинтерест.</span>
-                </a>
-              </li>
-              <li class="socials__item">
-                <a class="socials__link" href="#">
-                  <svg class="socials__link-img"  width="30" height="30" aria-hidden="true" focusable="false">
-                    <use xlink:href="img/sprite_auto.svg#ok"></use>
-                  </svg>
-                  <span class="visually-hidden">Одноклассники.</span>
                 </a>
               </li>
             </ul>

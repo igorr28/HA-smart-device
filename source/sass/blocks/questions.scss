@@ -1,5 +1,5 @@
 .questions {
-  padding-top: 170px;
+  padding-top: 164px;
   padding-bottom: 250px;
   background-color: $color-deep-sky-blue;
   background-image: url("../img/svg/form-triangle.svg");
@@ -9,8 +9,8 @@
   color: $color-default-white;
 
   @include vp-1023 {
-    padding-top: 50px;
-    padding-bottom: 125px;
+    padding-top: 45px;
+    padding-bottom: 123px;
     background-image: none;
   }
 
@@ -35,7 +35,7 @@
 }
 
 .questions__wrap {
-  padding-left: calc(625 / 1220) *100%;
+  padding-left: calc(632 / 1220) *100%;
   padding-right: calc(10 / 1220) *100%;
 
   @include vp-1023 {
@@ -53,12 +53,16 @@
   line-height: 1.42;
 
   @include vp-1023 {
-    margin-bottom: 20px;
+    margin-bottom: 7px;
   }
 
   @include vp-767 {
     margin-bottom: 10px;
     font-size: 30px;
+  }
+
+  @include vp-374 {
+    margin-bottom: 6px;
   }
 }
 
@@ -73,5 +77,9 @@
   @include vp-767 {
     margin-bottom: 40px;
     font-size: 14px;
+  }
+
+  @include vp-374 {
+    margin-bottom: 29px;
   }
 }

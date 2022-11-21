@@ -36,6 +36,7 @@
   @include vp-1023 {
     top: 40px;
     left: 45px;
+    width: 148px;
   }
 
   @include vp-767 {
@@ -53,8 +54,51 @@
 }
 
 .service__img {
+  margin-left: -189px;
+  margin-top: -114px;
   max-width: none;
+
+  @include vp-1023 {
+    margin-left: -249px;
+    margin-top: -550px;
+  }
+
+  @include vp-374 {
+    margin-left: -379px;
+    margin-top: -296px;
+  }
+
+  &--center {
+    margin-left: -530px;
+    margin-top: -114px;
+
+    @include vp-1023 {
+      margin-left: -630px;
+      margin-top: -317px;
+    }
+
+    @include vp-374 {
+      margin-left: -364px;
+      margin-top: -540px;
+    }
+  }
+
+  &--right {
+    margin-left: -893px;
+    margin-top: -114px;
+
+    @include vp-1023 {
+      margin-left: -146px;
+      margin-top: -360px;
+    }
+
+    @include vp-1023 {
+      margin-left: -884px;
+      margin-top: -395px;
+    }
+  }
 }
+
 
 .service__btn {
   position: absolute;

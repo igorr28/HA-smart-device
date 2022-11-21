@@ -1,5 +1,5 @@
 .main-footer {
-  padding-top: 50px;
+  padding-top: 52px;
   padding-bottom: 55px;
   background-color: $color-black-pearl;
   color: rgba($color-default-white, 0.7);
@@ -58,6 +58,11 @@
       background-color: $color-alice-blue;
     }
 
+    @include vp-374 {
+      left: calc(-52 / 374) *100%;
+      width: calc(52 * 2 / 374) *100% + 100%;
+    }
+
     @include vp-320 {
       left: calc(-25 / 320) *100%;
       width: calc(25 * 2 / 320) *100% + 100%;
@@ -66,7 +71,7 @@
 }
 
 .main-footer__logo {
-  margin-bottom: 30px;
+  margin-bottom: 27px;
 
   @include vp-1023 {
     margin-bottom: 0;
@@ -75,10 +80,14 @@
   @include vp-767 {
     margin-bottom: 15px;
   }
+
+  @include vp-374 {
+    margin-right: 18px;
+  }
 }
 
 .main-footer__socials-list {
-  margin-left: 15px;
+  margin-left: 11px;
 
   @include vp-1023 {
     margin-left: 0;
@@ -114,6 +123,11 @@
       background-color: $color-alice-blue;
     }
 
+    @include vp-374 {
+      left: calc(-52 / 374) *100%;
+      width: calc(52 * 2 / 374) *100% + 100%;
+    }
+
     @include vp-320 {
       left: calc(-25 / 320) *100%;
       width: calc(25 * 2 / 320) *100% + 100%;
@@ -135,6 +149,11 @@
     padding-top: 20px;
   }
 
+  @include vp-374 {
+    padding-top: 23px;
+    padding-bottom: 10px;
+  }
+
   &::after {
     @include vp-767 {
       position: absolute;
@@ -147,6 +166,11 @@
       background-color: $color-alice-blue;
     }
 
+    @include vp-374 {
+      left: calc(-52 / 374) *100%;
+      width: calc(52 * 2 / 374) *100% + 100%;
+    }
+
     @include vp-320 {
       left: calc(-25 / 320) *100%;
       width: calc(25 * 2 / 320) *100% + 100%;
@@ -155,7 +179,7 @@
 }
 
 .main-footer__contacts-title {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   margin-top: 0;
   font-family: $ff-condensed;
   font-weight: 400;
@@ -174,6 +198,10 @@
 .main-footer__contacts-address {
   font-style: normal;
   margin-bottom: 10px;
+
+  @include vp-1023 {
+    margin-bottom: 4px;
+  }
 }
 
 .main-footer__contacts-tels {

@@ -1,5 +1,5 @@
 .sections__title {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   margin-top: 0;
   font-family: $ff-condensed;
   font-weight: 400;
@@ -34,6 +34,10 @@
   display: grid;
   row-gap: 10px;
   list-style: none;
+
+  @include vp-1023 {
+    row-gap: 7px;
+  }
 }
 
 .sections__link {
