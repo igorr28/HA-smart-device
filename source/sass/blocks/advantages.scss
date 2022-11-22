@@ -18,7 +18,7 @@
   margin-bottom: 0;
   display: grid;
   grid-template-columns: repeat(2, calc(50% - 15px));
-  column-gap: calc(30 / 670) *100%;
+  column-gap: 30px;
   row-gap: 30px;
   padding-left: 0;
   list-style: none;
@@ -33,7 +33,7 @@
   }
 
   @include vp-374 {
-    row-gap: 32px;
+    row-gap: 30px;
   }
 }
 

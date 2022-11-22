@@ -11,6 +11,7 @@
     <link rel="preload" href="fonts/robotocondensedbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/robotomedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/ptmono.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+
   </head>
   <body>
     <div class="wrapper">
@@ -64,7 +65,7 @@
           <div class="container">
             <div class="promo__content">
               <h2>Печатные платы</h2>
-              <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
+              <p>производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
               <a class="btn btn--secondary promo__link smooth-link" href="#order">
                 <span class="promo__link-text">Получить бесплатную консультацию</span>
                 <span class="promo__link-text-mobile">бесплатная консультация</span>
@@ -126,8 +127,8 @@
           <div class="container about__container">
             <div class="about__img-wrap">
               <picture>
-                <source srcset="./img/2022.webp 1x, ./img/2022@2x.webp 2x" type="image/webp">
-                <img class="about__img" src="./img/2022.png" srcset="./img/2022@2x.png 2x" alt="Год 2022" width="150" height="320">
+                <source  type="image/webp" srcset="./img/2022.webp 1x, ./img/2022@2x.webp 2x">
+                <img class="about__img" src="./img/2022.png" srcset="./img/2022@2x.png 2x" alt="Год 2022" width="150" height="320" loading="lazy">
               </picture>
             </div>
             <div class="about__desc">
@@ -157,9 +158,9 @@
                     <h3>Производство печатных плат</h3>
                     <div class="service__img-wrap">
                       <picture>
-                        <source type="image/webp" srcset="img/services.webp 1x, img/services@2x.webp 2x">
+                        <source type="image/webp" srcset="./img/services.webp 1x, ./img/services@2x.webp 2x">
 
-                        <img class="service__img" src="./img/services.jpg" srcset="./img/services@2x.jpg 2x" alt="Фото печатной платы" width="1494" height="818">
+                        <img class="service__img" src="./img/services.jpg" srcset="./img/services@2x.jpg 2x" alt="Фото печатной платы" width="1494" height="818" loading="lazy">
                       </picture>
                     </div>
                     <div class="service__btn">
@@ -179,7 +180,7 @@
                       <picture>
                         <source type="image/webp" srcset="img/services.webp 1x, img/services@2x.webp 2x">
 
-                        <img class="service__img service__img--center" src="./img/services.jpg" srcset="./img/services@2x.jpg 2x" alt="Фото печатной платы" width="1494" height="818">
+                        <img class="service__img service__img--center" src="./img/services.jpg" srcset="./img/services@2x.jpg 2x" alt="Фото печатной платы" width="1494" height="818" loading="lazy">
                       </picture>
                     </div>
                     <div class="service__btn">
@@ -199,7 +200,7 @@
                       <picture>
                         <source type="image/webp" srcset="img/services.webp 1x, img/services@2x.webp 2x">
 
-                        <img class="service__img service__img--right" src="./img/services.jpg" srcset="./img/services@2x.jpg 2x" alt="Фото печатной платы" width="1494" height="818">
+                        <img class="service__img service__img--right" src="./img/services.jpg" srcset="./img/services@2x.jpg 2x" alt="Фото печатной платы" width="1494" height="818" loading="lazy">
                       </picture>
                     </div>
                     <div class="service__btn">
@@ -363,7 +364,7 @@
             <textarea id="question-modal" name="question" cols="10" rows="6" placeholder="Ваш вопрос"
               maxlength="200"></textarea>
 
-              <label class="form__control control">
+              <label class="form__control control control--modal">
                 <input class="visually-hidden control__input" type="checkbox" name="consent" data-validate required>
                 <span class="control__mark-checkbox"></span>
                 <span class="control__label">Я согласен на&nbsp;обработку персональных данных</span>

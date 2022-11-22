@@ -32,11 +32,14 @@
   font-size: 20px;
   line-height: 1.5;
   color: $color-default-white;
+  max-height: 550px;
+  overflow: hidden;
 
   @include vp-1023 {
     top: 40px;
     left: 45px;
     width: 148px;
+    max-height: 190px;
   }
 
   @include vp-767 {

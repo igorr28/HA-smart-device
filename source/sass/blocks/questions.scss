@@ -20,13 +20,15 @@
 }
 
 .questions__container {
-  background-image: url("../img/form-plane.png");
+  background-image: url("../img/form-plane.webp");
   background-repeat: no-repeat;
   background-position: 110px 82px;
   background-size: calc(510 / 1440) *100% auto;
 
-  @include retina {
-    background-image: url("../img/form-plane@2x.png");
+  @media (min-width: (1023px)) {
+    @include retina {
+      background-image: url("../img/form-plane@2x.webp");
+    }
   }
 
   @include vp-1023 {
