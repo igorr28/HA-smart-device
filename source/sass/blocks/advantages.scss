@@ -8,7 +8,7 @@
   }
 
   @include vp-767 {
-    padding-top: 50px;
+    padding-top: 52px;
     padding-bottom: 25px;
   }
 }
@@ -19,7 +19,7 @@
   display: grid;
   grid-template-columns: repeat(2, calc(50% - 15px));
   column-gap: 30px;
-  row-gap: 30px;
+  row-gap: 27px;
   padding-left: 0;
   list-style: none;
 
@@ -33,12 +33,12 @@
   }
 
   @include vp-374 {
-    row-gap: 30px;
+    row-gap: 31px;
   }
 }
 
 .advantages__item {
-  padding: 40px 44px 20px;
+  padding: 40px 40px 20px;
   border: 1px solid $color-whisper;
   border-left: 5px solid $color-deep-sky-blue;
   transition: $trans-default;

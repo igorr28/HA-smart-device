@@ -18,18 +18,19 @@
 
 .contacts__item {
   margin: 5px calc(15 / 510) *100%;
+  min-width: 220px;
 
   @include vp-1023 {
     margin-left: 10px;
     margin-right: 10px;
     width: auto;
+    min-width: 40px;
   }
 }
 
 .contacts__link {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  min-width: 220px;
   max-width: 230px;
   padding-top: 10px;
   padding-bottom: 10px;

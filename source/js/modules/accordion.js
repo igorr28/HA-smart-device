@@ -11,13 +11,16 @@ const accordionHandler = (e) => {
         if (accordionButton.classList.contains('accordion__btn--close')) {
           accordionButton.classList.remove('accordion__btn--close');
           accordionButton.nextElementSibling.style.height = accordionButton.nextElementSibling.scrollHeight + 'px';
+          accordionButton.nextElementSibling.style.marginBottom = '9px';
         } else {
           accordionButton.classList.add('accordion__btn--close');
           accordionButton.nextElementSibling.style.height = '0px';
+          accordionButton.nextElementSibling.style.marginBottom = '0px';
         }
       } else {
         accordionButton.classList.add('accordion__btn--close');
         accordionButton.nextElementSibling.style.height = '0px';
+        accordionButton.nextElementSibling.style.marginBottom = '0px';
       }
     }
   }

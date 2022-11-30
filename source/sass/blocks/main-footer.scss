@@ -107,8 +107,6 @@
     position: relative;
     width: 100%;
     margin-right: 0;
-    padding-bottom: 20px;
-    padding-top: 20px;
   }
 
   &::after {
@@ -145,13 +143,6 @@
   @include vp-767 {
     position: relative;
     width: 100%;
-    padding-bottom: 20px;
-    padding-top: 20px;
-  }
-
-  @include vp-374 {
-    padding-top: 23px;
-    padding-bottom: 10px;
   }
 
   &::after {
@@ -192,7 +183,9 @@
 
   @include vp-767 {
     position: relative;
-    margin-bottom: 15px;
+    margin-bottom: 0;
+    padding-top: 20px;
+    padding-bottom: 16px;
   }
 }
 
@@ -203,6 +196,10 @@
   @include vp-1023 {
     margin-bottom: 4px;
   }
+
+  @include vp-374 {
+    margin-bottom: 10px;
+  }
 }
 
 .main-footer__contacts-tels {
@@ -212,4 +209,25 @@
   list-style: none;
   display: grid;
   row-gap: 10px;
+
+  @include vp-374 {
+    row-gap: 5px;
+  }
+}
+
+.main-footer__contacts-link {
+  color: rgba($color-default-white, 0.7);
+
+  &:hover {
+    color: $color-deep-sky-blue;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $color-deep-sky-blue;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
 }

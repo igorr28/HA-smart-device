@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   z-index: 100;
-  padding-top: 30px;
+  padding-top: 33px;
   padding-bottom: 35px;
   color: $color-alice-blue-text;
   background-image: linear-gradient(180deg, $color-black-pearl 84.9%, rgba($color-black-pearl, 0) 100%);
@@ -34,11 +34,7 @@
 
 .main-header__container {
   display: flex;
-  align-items: center;
-
-  @include vp-1023 {
-    align-items: start;
-  }
+  align-items: start;
 }
 
 .main-header__contacts {

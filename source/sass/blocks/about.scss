@@ -3,7 +3,7 @@
   padding-bottom: 94px;
 
   @include vp-1023 {
-    padding-top: 38px;
+    padding-top: 37px;
     padding-bottom: 84px;
   }
 
@@ -44,7 +44,7 @@
 
 .about__desc h2 {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 13px;
   font-family: $ff-condensed;
   font-weight: 400;
   font-size: 36px;
@@ -69,21 +69,18 @@
   }
 }
 
-.about__text {
-  height: 162px;
+.about__text-more {
+  height: 0;
   overflow: hidden;
   transition: $trans-600;
+}
 
-  @include vp-1023 {
-    height: 255px;
-  }
-
+.about__text-mobile {
   @include vp-767 {
-    height: 200px;
-  }
-
-  @include vp-374 {
-    height: 211px;
+    display: flex;
+    height: 0;
+    overflow: hidden;
+    transition: $trans-600;
   }
 }
 
@@ -91,10 +88,10 @@
   margin-top: 30px;
 
   @include vp-1023 {
-    margin-top: 22px;
+    margin-top: 1px;
   }
 
   @include vp-374 {
-    margin-top: 12px;
+    margin-top: -5px;
   }
 }
