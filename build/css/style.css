@@ -1143,12 +1143,12 @@ button,
 }
 
 .about__img-wrap {
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
+  width: 12.2950819672%;
 }
 
 .about__desc {
-  margin-left: 100px;
+  width: 79.5081967213%;
+  margin-left: 8.1967213115%;
 }
 
 .about__desc h2 {
@@ -1953,8 +1953,13 @@ button,
     padding-bottom: 84px;
   }
 
+  .about__img-wrap {
+    width: 22.3880597015%;
+  }
+
   .about__desc {
-    margin-left: 24px;
+    width: 73.8805970149%;
+    margin-left: 3.7313432836%;
   }
 
   .about__btn {
@@ -2203,6 +2208,11 @@ button,
 
   .about__img-wrap {
     display: none;
+  }
+
+  .about__desc {
+    width: 100%;
+    margin-left: 0;
   }
 
   .about__desc h2 {
@@ -2491,10 +2501,6 @@ button,
   .about {
     padding-top: 15px;
     padding-bottom: 79px;
-  }
-
-  .about__desc {
-    margin-left: 0;
   }
 
   .about__desc p {

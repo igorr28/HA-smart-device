@@ -23,7 +23,11 @@
 }
 
 .about__img-wrap {
-  flex-shrink: 0;
+  width: calc(150 / 1220) * 100%;
+
+  @include vp-1023 {
+    width: calc(150 / 670) * 100%;
+  }
 
   @include vp-767 {
     display: none;
@@ -31,13 +35,16 @@
 }
 
 .about__desc {
-  margin-left: 100px;
+  width: calc(970 / 1220) * 100%;
+  margin-left: calc(100 / 1220) * 100%;
 
   @include vp-1023 {
-    margin-left: 24px;
+    width: calc(495 / 670) * 100%;
+    margin-left: calc(25 / 670) * 100%;
   }
 
-  @include vp-374 {
+  @include vp-767 {
+    width: 100%;
     margin-left: 0;
   }
 }
